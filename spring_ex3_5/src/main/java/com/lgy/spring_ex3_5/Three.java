@@ -1,0 +1,11 @@
+package com.lgy.spring_ex3_5;
+
+public class Three {
+	public void process(int num) {
+		if(num%3 == 0 && num != 0) {
+			System.out.println("입력된 수: "+num+"는 3의 배수이다.");
+		}else {
+			System.out.println("입력된 수: "+num+"는 3의 배수가 아닙니다.");
+		}
+	}
+}
