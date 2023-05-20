@@ -7,7 +7,7 @@
 	<bean id="calculator" class="com.lgy.spring_3_2.Calculator"></bean>
 	
 <!-- 	MyCalculator 클래스로 myCalculator 객 체 생성 -->
-	<bean id="myCalculator" class="com.lgy.spring_3_2.MyCalculator">
+	<bean id="myCalculator2" class="com.lgy.spring_3_2.MyCalculator">
 <!-- 		setCalculator 호출 -->
 		<property name="calculator">
 <!-- 		<bean id="calculator" 객체임 -->
