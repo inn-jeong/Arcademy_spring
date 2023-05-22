@@ -17,7 +17,7 @@ public class MainClass {
 		AbstractApplicationContext ctx = new GenericXmlApplicationContext(configLoc);
 		//getBean 메소드로 객체정보를 가져옴
 //		MyCalculator myCalculator = ctx.getBean("myCalculator", MyCalculator.class);
-		//xml 파일의 <bean id="myCalculator2 "
+		//xml 파일의 <bean id="myCalculator2"
 		MyCalculator myCalculator = ctx.getBean("myCalculator2", MyCalculator.class);
 		
 		
