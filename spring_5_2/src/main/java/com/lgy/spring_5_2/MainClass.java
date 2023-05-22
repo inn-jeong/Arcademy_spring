@@ -17,7 +17,7 @@ public class MainClass {
 		//Pencil.class: 인터페이스도 사용가능(참조변수는 인터페이스로 받으면 됨)
 		Pencil pencil1 = ctx.getBean("pencil1", Pencil.class);
 		//use(): 오버라이딩한 메소드 호출
-		pencil1.use();
+		//pencil1.use();
 		Pencil pencil2 = ctx.getBean("pencil2", Pencil.class);
 		pencil2.use();
 		Pencil pencil3 = ctx.getBean("pencil3", Pencil.class);
