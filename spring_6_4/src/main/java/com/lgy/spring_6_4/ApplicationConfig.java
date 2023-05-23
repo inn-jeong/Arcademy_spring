@@ -10,7 +10,7 @@ import org.springframework.context.annotation.ImportResource;
 @Configuration
 @ImportResource("classpath:applicationCTX.xml")
 public class ApplicationConfig {
-	@Bean
+	@Bean(name = "name")
 	public Student student1() {
 		ArrayList<String> hobbys = new ArrayList<String>();
 		hobbys.add("수영");
@@ -22,6 +22,20 @@ public class ApplicationConfig {
 		
 		return student;
 	}
+//	@Bean
+//	public StudentInfo studentInfo() {
+//		ArrayList<String> hobbys = new ArrayList<String>();
+//		hobbys.add("수영");
+//		hobbys.add("요리");
+//		
+//		Student student = new Student("홍길동", 20, hobbys);
+//		student.setHeight(180);
+//		student.setWeight(80);
+//		
+//		StudentInfo studentInfo = new StudentInfo();
+//		studentInfo.setStudent(student);
+//		return studentInfo;
+//	}
 //	@Bean
 //	public Student student2() {
 //		ArrayList<String> hobbys = new ArrayList<String>();

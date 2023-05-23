@@ -11,7 +11,8 @@ public class MainClass {
 		//xml스프링 설정으로 변경
 //		AbstractApplicationContext ctx = new GenericXmlApplicationContext("classpath:applicationCTX.xml");
 		//객체 정보 가져옴
-		Student student = ctx.getBean("student1", Student.class);
+//		Student student = ctx.getBean("student1", Student.class);
+		Student student = ctx.getBean("name", Student.class);
 		System.out.println("이름: "+student.getName());
 		System.out.println("나이: "+student.getAge());
 		System.out.println("취미: "+student.getHobbys());
@@ -19,11 +20,11 @@ public class MainClass {
 		System.out.println("몸무게: "+student.getWeight());
 		
 		//홍길순 객체정보 가져옴
-		Student student2 = ctx.getBean("student2", Student.class);
-		System.out.println("이름: "+student2.getName());
-		System.out.println("나이: "+student2.getAge());
-		System.out.println("취미: "+student2.getHobbys());
-		System.out.println("신장: "+student2.getHeight());
-		System.out.println("몸무게: "+student2.getWeight());
+//		Student student2 = ctx.getBean("student2", Student.class);
+//		System.out.println("이름: "+student2.getName());
+//		System.out.println("나이: "+student2.getAge());
+//		System.out.println("취미: "+student2.getHobbys());
+//		System.out.println("신장: "+student2.getHeight());
+//		System.out.println("몸무게: "+student2.getWeight());
 	}
 }
