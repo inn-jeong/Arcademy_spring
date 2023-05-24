@@ -9,6 +9,8 @@ public class MainClass {
 		Student student = ctx.getBean("student",Student.class);
 		//학생정보 출력(핵심기능 - 메소드)
 		student.getStudentInfo();
+		student.setName("이진삼");
+		student.getStudentInfo();
 		
 		Worker worker = ctx.getBean("worker",Worker.class);
 		worker.getWorkerInfo();
