@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<booklist>
+	<book isbn="B001" kind="react">
+		<title>리액트 정보</title> 0
+		<author>홍길동</author>
+		<price>30000</price>
+		<title>리액트 정보</title> 1
+	</book>
+	<book isbn="B002" kind="vue">
+		<title>뷰 정보</title>
+		<author>김길동</author>
+		<price>25000</price>
+	</book>
+</booklist>
