@@ -12,6 +12,9 @@ public class Student {
 	public String getName() {
 		return name;
 	}
+//	public int getter(int age) {
+//		return age;
+//	}
 	public void setName(String name) {
 		this.name = name;
 	}
