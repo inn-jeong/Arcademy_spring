@@ -1,0 +1,2 @@
+oracle=oracle.jdbc.driver.OracleDriver
+mysql=com.mysql.jdbc.Driver
