@@ -13,6 +13,7 @@ public class MainClass {
 		calculation.sub();
 		calculation.mul();
 		calculation.div();
+		
 	}
 	
 }
