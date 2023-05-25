@@ -20,6 +20,6 @@ public class MainClass {
 //		@# destroyMethod()
 //		@# destroy()
 		ctx.refresh();
-//		ctx.close();
+		ctx.close();
 	}
 }
