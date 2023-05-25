@@ -38,6 +38,5 @@ public class LogAop {
 			System.out.println(signatureStr+"의 경과시간 : "+(et-st));
 		}
 		return obj;
-		
 	}
 }
