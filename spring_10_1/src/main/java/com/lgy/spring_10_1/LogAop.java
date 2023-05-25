@@ -3,6 +3,7 @@ package com.lgy.spring_10_1;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 
 //공통기능 클래스
@@ -19,24 +20,30 @@ public class LogAop {
 		System.out.println(signatureStr + "is start.");
 		long st = System.currentTimeMillis();
 		Object obj = null;
+//		System.out.println("test1");
 		
 //		//2번 방식
-//		try {
-//			//핵심기능 실행
-//			obj = joinPoint.proceed();//예외처리 추가
-//			return obj;
-//		}finally {
-//			//공통기능 실행(advice)
-//			long et = System.currentTimeMillis();
-//			System.out.println(signatureStr + "is finished");
-//			System.out.println(signatureStr+"의 경과시간 : "+(et-st));
-//		}
-		obj = joinPoint.proceed();//예외처리 추가
-		if(obj == null) {
+		try {
+			//핵심기능 실행
+			obj = joinPoint.proceed();//예외처리 추가
+			return obj;
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally {
+			//공통기능 실행(advice)
 			long et = System.currentTimeMillis();
 			System.out.println(signatureStr + "is finished");
 			System.out.println(signatureStr+"의 경과시간 : "+(et-st));
 		}
 		return obj;
+//		System.out.println("test2");
+//		obj = joinPoint.proceed();//예외처리 추가
+//		if(obj == null) {
+//			long et = System.currentTimeMillis();
+//			System.out.println(signatureStr + "is finished");
+//			System.out.println(signatureStr+"의 경과시간 : "+(et-st));
+//			System.out.println("test3");
+//		}
+//		return obj;
 	}
 }
