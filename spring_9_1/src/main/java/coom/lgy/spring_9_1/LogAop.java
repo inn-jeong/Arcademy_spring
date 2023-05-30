@@ -13,21 +13,6 @@ public class LogAop {
 		long st = System.currentTimeMillis();
 		Object obj = null;
 		
-//		1번 방식
-//		try {
-//			//핵심기능 실행
-//			obj = joinPoint.proceed();//예외처리 추가
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}finally {
-//			//공통기능 실행(advice)
-//			long et = System.currentTimeMillis();
-//			System.out.println(signatureStr + "is finished");
-//			System.out.println(signatureStr+"의 경과시간 : "+(et-st));
-//		}
-//		return obj;
-		
-		//2번 방식
 		try {
 			//핵심기능 실행
 			obj = joinPoint.proceed();//예외처리 추가
