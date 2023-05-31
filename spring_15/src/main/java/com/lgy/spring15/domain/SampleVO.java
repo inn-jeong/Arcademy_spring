@@ -6,10 +6,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-//@Getter
-//@Setter
-//@AllArgsConstructor
-@Data
+@Getter
+@Setter
+@AllArgsConstructor
 public class SampleVO {
 	private int mno;
 	private String firstName;
