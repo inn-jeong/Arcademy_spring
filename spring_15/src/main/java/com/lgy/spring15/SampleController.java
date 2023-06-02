@@ -89,14 +89,19 @@ public class SampleController {
 	}
 	
 	@PostMapping("/ticket")
-	//@RequestBody : json 데이터를 받을 수 있음
+	//@RequestBody : post 방식은 데이터가 body에 담겨 오므로 json 데이터를 받을 수 있음
 	public Ticket convert(@RequestBody Ticket ticket) {
 		log.debug("@# ticket ===>"+ticket);
 		return ticket;
 	}
 	
+//	@PostMapping("/info")
+//	public void info(@RequestBody MemberVO vo) {
+//		log.debug("@# vo ===>"+vo);
+//	}
 	@PostMapping("/info")
-	public void info(@RequestBody MemberVO vo) {
+	public MemberVO info(@RequestBody MemberVO vo) {
 		log.debug("@# vo ===>"+vo);
+		return vo;
 	}
 }
