@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -38,6 +39,11 @@ public class MemDao {
 			result = -1;
 		}
 		return result;
+	}
+	
+	public ArrayList<MemDto> loginYn(String mem_uid, String mem_pwd) {
+		String sql = "select mem_uid, mem_pwd, mem_name from mvc_member where mem_uid='"+mem_uid+"'";
+		return (ArrayList<MemDto>) template.query(sql, new BeanPropertyRowMapper(MemDto.class));
 	}
 	
 	public int memberInsert(final String mem_uid, final String mem_pwd, final String mem_name) {
