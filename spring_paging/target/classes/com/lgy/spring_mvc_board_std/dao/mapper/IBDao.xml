@@ -18,8 +18,11 @@
 		]]>
     </select>
     <insert id="write" parameterType="hashmap">
+<!--     	insert into mvc_board(bid, bname, btitle, bcontent, bhit) values( -->
+<!--     		MVC_BOARD_SEQ.NEXTVAL,#{bname},#{btitle},#{bcontent},0 -->
+<!--     	) -->
     	insert into mvc_board(bid, bname, btitle, bcontent, bhit) values(
-    		MVC_BOARD_SEQ.NEXTVAL,#{bname},#{btitle},#{bcontent},0
+    		(select max(bid)+1 from mvc_board),#{bname},#{btitle},#{bcontent},0
     	)
     </insert>
     <select id="contentView" parameterType="hashmap" resultType="com.lgy.spring_mvc_board_std.dto.BDto">
@@ -31,4 +34,8 @@
     <delete id="delete" parameterType="hashmap">
     	delete from mvc_board where bid=#{bid}
     </delete>
+    
+    <select id="getTotalCount" resultType="int">
+    	select count(*) from mvc_board
+    </select>
 </mapper>

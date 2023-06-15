@@ -16,4 +16,5 @@ public interface BService {
 	public BDto contentView(HashMap<String, String> param);
 	public void modify(HashMap<String, String> param);
 	public void delete(HashMap<String, String> param);
+	public int getTotalCount();
 }

@@ -8,7 +8,10 @@
 </head>
 <body>
 	<form method="post" action="modify">
-		<input type="hidden" name="bid" value="${content_view.bid}">
+<%-- 		<input type="hidden" name="bid" value="${content_view.bid}"> --%>
+		<input type="hidden" name="pageNum" value="${pageMaker.pageNum}">
+		<input type="hidden" name="amount" value="${pageMaker.amount}">
+		<input type="hidden" name="bid" value="${pageMaker.bid}">
 		<table width="500" border="1">
 			<tr>
 				<td>번호</td>
@@ -42,8 +45,11 @@
 			<tr>
 				<td colspan="2">
 					<input type="submit" value="수정">
-					&nbsp;&nbsp;&nbsp;<a href="list">목록보기</a>
-					&nbsp;&nbsp;&nbsp;<a href="delete?bid=${content_view.bid}">글삭제</a>
+<!-- 					&nbsp;&nbsp;&nbsp;<a href="list">목록보기</a> -->
+<!-- 					formaction="list" : name으로 설정된 값들을 가지고 이동 -->
+					&nbsp;&nbsp;&nbsp;<input type="submit" value="목록보기" formaction="list">
+<%-- 					&nbsp;&nbsp;&nbsp;<a href="delete?bid=${content_view.bid}">글삭제</a> --%>
+					&nbsp;&nbsp;&nbsp;<input type="submit" value="글삭제" formaction="delete">
 				</td>
 			</tr>
 		</table>
