@@ -12,7 +12,8 @@
 	
 	<!-- Application Loggers -->
 	<logger name="com.lgy.spring15">
-		<level value="info" />
+<!-- 		<level value="info" /> -->
+		<level value="debug" />
 	</logger>
 	
 	<!-- 3rdparty Loggers -->

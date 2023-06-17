@@ -1,0 +1,15 @@
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lgy.spring_test_member_std.IMemDao">
+
+    <select id="loginYn" parameterType="hashmap" resultType="com.lgy.spring_test_member_std.MemDto">
+        select mem_uid, mem_pwd, mem_name from mvc_member where mem_uid=#{mem_uid}
+    </select>
+    <insert id="memberInsert" parameterType="hashmap">
+    	insert into mvc_member(mem_uid, mem_pwd, mem_name) values(
+    		#{mem_uid},#{mem_pwd},#{mem_name}
+    	)
+    </insert>
+</mapper>

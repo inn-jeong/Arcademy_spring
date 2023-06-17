@@ -48,5 +48,4 @@ public class HomeController {
 		model.addAttribute("pw",pw);
 		return "board/confirmId";
 	}
-	
 }
