@@ -152,7 +152,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="spring_paging" path="/spring_paging" reloadable="true" source="org.eclipse.jst.jee.server:spring_paging"/><Context docBase="spring_validation" path="/spring_validation" reloadable="true" source="org.eclipse.jst.jee.server:spring_validation"/><Context docBase="spring_validation_2nd" path="/spring_validation_2nd" reloadable="true" source="org.eclipse.jst.jee.server:spring_validation_2nd"/></Host>
+      <Context docBase="spring_paging" path="/spring_paging" reloadable="true" source="org.eclipse.jst.jee.server:spring_paging"/><Context docBase="spring_validation" path="/spring_validation" reloadable="true" source="org.eclipse.jst.jee.server:spring_validation"/><Context docBase="spring_validation_2nd" path="/spring_validation_2nd" reloadable="true" source="org.eclipse.jst.jee.server:spring_validation_2nd"/><Context docBase="spring_validation_3rd" path="/spring_validation_3rd" reloadable="true" source="org.eclipse.jst.jee.server:spring_validation_3rd"/><Context docBase="spring_tran" path="/spring_tran" reloadable="true" source="org.eclipse.jst.jee.server:spring_tran"/><Context docBase="spring_tran_2nd" path="/spring_tran_2nd" reloadable="true" source="org.eclipse.jst.jee.server:spring_tran_2nd"/></Host>
     </Engine>
   </Service>
 </Server>
