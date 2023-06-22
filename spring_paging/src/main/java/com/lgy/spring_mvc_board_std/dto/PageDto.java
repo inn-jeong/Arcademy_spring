@@ -1,8 +1,10 @@
 package com.lgy.spring_mvc_board_std.dto;
 
 import lombok.Getter;
+import lombok.ToString;
 
 @Getter
+@ToString
 public class PageDto {
 	//페이지 번호가 10개씩 보이게 (1~10, 11~20)
 	private int startPage; //시작페이지: 1,11
