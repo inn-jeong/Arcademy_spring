@@ -36,4 +36,9 @@ public class HomeController {
 		return "home";
 	}
 	
+	@RequestMapping("login.html")
+	public String login() {
+		return "security/login";
+	}
+	
 }
