@@ -16,6 +16,11 @@
 	<c:if test="${empty pageContext.request.userPrincipal}">
 		<p>is Log-Out</p>
 	</c:if>
+<!-- 	pageContext.request.userPrincipal.name: 사용자 아이디 -->
+	USER ID: ${pageContext.request.userPrincipal.name} <br>
+<!-- 	pageContext.request.contextPath: 프로젝트 경로 -->
+<!-- 	j_spring_security_logout: spring security에서 제공하는 로그아웃 -->
+	<a href="${pageContext.request.contextPath}/j_spring_security_logout">Log Out</a>
 	
 </body>
 </html>
