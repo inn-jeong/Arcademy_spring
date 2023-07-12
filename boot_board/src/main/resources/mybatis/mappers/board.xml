@@ -1,0 +1,24 @@
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.boot.dao.IBDao">
+
+    <select id="list" resultType="com.boot.dto.BDto">
+        select bid, bname, btitle, bcontent, bdate, bhit from mvc_board
+    </select>
+	<insert id="write" parameterType="hashmap">
+    	insert into mvc_board(bid, bname, btitle, bcontent, bhit) values(
+    		(select max(bid)+1 from mvc_board),#{bname},#{btitle},#{bcontent},0
+    	)
+    </insert>
+    <select id="contentView" parameterType="hashmap" resultType="com.boot.dto.BDto">
+    	select bid, bname, btitle, bcontent, bdate, bhit from mvc_board where bid=#{bid}
+    </select>
+    <update id="modify" parameterType="hashmap">
+    	update mvc_board set bname=#{bname}, btitle=#{btitle}, bcontent=#{bcontent} where bid=#{bid}
+    </update>
+    <delete id="delete" parameterType="hashmap">
+    	delete from mvc_board where bid=#{bid}
+    </delete>
+</mapper>

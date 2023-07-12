@@ -1,0 +1,15 @@
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.boot.ItemDao">
+
+    <select id="list" resultType="com.boot.ItemDto">
+        select name,price,description from item
+    </select>
+    <insert id="insertItem" parameterType="hashmap">
+    	insert into item(name, price, description) values(
+    		#{name},#{price},#{description}
+    	)
+    </insert>
+</mapper>
