@@ -45,12 +45,12 @@ public class HomeController {
 	}
 	
 	//HttpServletRequest : 뷰에서 넘어온 값을 받는다.
-//	@RequestMapping("/student")
+	@RequestMapping("/student")
 //	value 속성을 사용해서 url 값을 받음
 //	@RequestMapping(value = "/student")
 //	method = RequestMethod.GET => get 방식만 받을 수 있음
 //	@RequestMapping(method = RequestMethod.GET, value = "/student")
-	@RequestMapping(method = RequestMethod.POST, value = "/student")
+//	@RequestMapping(method = RequestMethod.POST, value = "/student")
 	public String gostudent(HttpServletRequest httpServletRequest, Model model) {
 		String id = httpServletRequest.getParameter("id");
 		model.addAttribute("studentId",id);
