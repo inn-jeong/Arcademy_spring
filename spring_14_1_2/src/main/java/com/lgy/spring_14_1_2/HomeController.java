@@ -55,15 +55,15 @@ public class HomeController {
 		return "/student/studentId";
 	}
 	
-	@RequestMapping(method = RequestMethod.POST, value = "/student")
-//	오버로딩하기 위해 ModelAndView 사용
-	public ModelAndView goStudent(HttpServletRequest httpServletRequest) {
-		System.out.println("@# RequestMethod.POST");
-		String id = httpServletRequest.getParameter("id");
-		ModelAndView mv = new ModelAndView();
-		mv.addObject("studentId",id);
-		mv.setViewName("student/studentId");
-		return mv;
-	}
+//	@RequestMapping(method = RequestMethod.POST, value = "/student")
+////	오버로딩하기 위해 ModelAndView 사용
+//	public ModelAndView goStudent(HttpServletRequest httpServletRequest) {
+//		System.out.println("@# RequestMethod.POST");
+//		String id = httpServletRequest.getParameter("id");
+//		ModelAndView mv = new ModelAndView();
+//		mv.addObject("studentId",id);
+//		mv.setViewName("student/studentId");
+//		return mv;
+//	}
 	
 }

@@ -8,7 +8,7 @@
 </head>
 <body>
 <!-- 	<form method="post" action="student"> -->
-	<form method="get" action="student">
+	<form method="post" action="student">
 		student id: <input type="text" name="id">
 		<input type="submit" value="전송">
 	</form>
