@@ -47,7 +47,7 @@ public class SampleControllerTests {
 		
 		//Gson : 구글에서 제공되는 것으로 객체를 json 형식의 문자열로 변환
 		String jsonStr = new Gson().toJson(ticket);
-		log.debug("@# jsonStr ===> "+jsonStr);
+		log.info("@# jsonStr ===> "+jsonStr);
 		
 		//post("/sample/ticket") : post 방식으로 컨트롤러단을 찾아감
 		mockMvc.perform(post("/sample/ticket")
