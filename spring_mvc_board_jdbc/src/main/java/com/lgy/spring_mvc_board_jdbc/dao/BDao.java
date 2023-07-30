@@ -43,7 +43,7 @@ public class BDao {
 	}
 	
 	public void write(final String bname, final String btitle, final String bcontent) {
-		//22줄 -> 15 ?
+		//22줄 -> 14 줄 , 8줄 줄임
 		//update: jdbc template 으로 insert(PreparedStatementCreator 객체 사용)
 		template.update(new PreparedStatementCreator() {
 			
