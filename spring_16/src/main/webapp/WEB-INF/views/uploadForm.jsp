@@ -8,6 +8,7 @@
 </head>
 <body>
 	<form method="post" action="uploadFormAction" enctype="multipart/form-data">
+<!-- 		multiple : 다중 선택 가능 -->
 <!-- 		<input type="file" name="uploadFile" multiple> -->
 		<input type="file" name="uploadFile">
 		<button>submit</button>

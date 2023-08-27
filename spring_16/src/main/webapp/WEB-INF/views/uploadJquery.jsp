@@ -151,7 +151,6 @@
 		}//end of showUploadedFile
 		
 		$(".bigPictureWrapper").on("click",function(){
-// 			$(".bigPicture").animate({width:"0%",height:"0%"},0);
 			$(".bigPicture").css({width:"0%",height:"0%"},0);
 			
 			$(".bigPictureWrapper").hide();
