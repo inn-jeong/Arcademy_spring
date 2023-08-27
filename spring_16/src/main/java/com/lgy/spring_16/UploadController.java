@@ -129,8 +129,8 @@ public class UploadController {
 			}//end of catch
 		}//end of for
 		//파일정보들을 list 객체에 담고, http 상태값은 정상으로 리턴
-//		return new ResponseEntity<List<AttachFileDTO>>(list,HttpStatus.OK);
-		return new ResponseEntity<>(list,HttpStatus.OK);
+		return new ResponseEntity<List<AttachFileDTO>>(list,HttpStatus.OK);
+//		return new ResponseEntity<>(list,HttpStatus.OK);
 	}
 	
 	private String getFolder() {
@@ -182,7 +182,8 @@ public class UploadController {
 			//이미지파일 타입을 헤더에 추가
 			header.add("Content-Type", Files.probeContentType(file.toPath()));
 //			파일정보를 byte 배열로 복사 + 헤더정보 + http 상태 정상을 결과에 저장
-			result = new ResponseEntity<>(FileCopyUtils.copyToByteArray(file)
+//			result = new ResponseEntity<>(FileCopyUtils.copyToByteArray(file)
+			result = new ResponseEntity<byte[]>(FileCopyUtils.copyToByteArray(file)
 											, header, HttpStatus.OK);
 		} catch (Exception e) {
 			e.printStackTrace();
